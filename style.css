@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+   background-color: black;
+   margin: 0;
+   overflow-x: hidden;
+   
+}
+  *{
+      padding: 0%;
+      margin: 0%;
+      font-family: "Poppins", sans-serif;
+  }
+.main{
+
+  background-image: url("IN-en-20241021-TRIFECTA-perspective_2277eb50-9da3-4fdf-adbe-74db0e9ee2cf_large.jpg");
+  height:95vh;
+  position: relative;
+  background-size: cover;
+  background-position:center center ;
+}
+.overlay{
+    position:absolute;
+     top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+
+}
+.content{
+  
+top: 2.4vh;
+  position: relative;
+  z-index: 10;
+
+ 
+}
+nav{
+max-width: 80vw; 
+margin: auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+height: 63px;
+}
+.content.text{
+font-family: "Martel Sans", sans-serif;
+
+font-weight: 10;
+font-style: normal;
+
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column ;
+color: white;
+position: relative;
+top: 15vh;
+}
+.content.text> :nth-child(1){
+font-weight: 1000;
+font-size: 55px;
+text-align: center;
+}
+.content.text> :nth-child(2){
+font-weight: 1000;
+font-size: 55px;
+text-align: center;
+}
+.content.text> :nth-child(3){
+font-weight: 1000;
+font-size: 55px;
+text-align: center;
+}
+.content.text> :nth-child(4){
+font-weight: 500;
+font-size: 20px;
+text-align: center;
+
+}
+.content.text> :nth-child(5){
+font-weight: 400;
+font-size: 16px;
+text-align: center;
+margin-top: 2.6%;
+margin-bottom:1.2% ;
+}
+
+.header {
+      position: relative;
+      height: 20px; 
+      background-color: #000;
+      background-size: cover;
+      background-position: center;
+      overflow:visible;
+  }
+
+  .header::after {
+      content: "   ";
+      position: absolute;
+      bottom: 0 ;
+      left:0 ;
+      width: 100%;
+      height: 10px;
+      background: linear-gradient(to right, transparent, red, transparent);
+      border-radius: 60% 60% 0 0 / 100% 100% 0 0;
+      box-shadow: 0 -5px 10px rgba(0, 0, 139, 0.6); 
+  }
+
+  .curve {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 3px; 
+      background-color: #000;
+      border-top-left-radius: 100% 50px;
+      border-top-right-radius: 100% 50px;
+  }
+  .btn{
+   padding: 8px ;
+   font-weight: 400;
+   font-size: 16px;    
+   border-radius: 5px;  
+   color: white;
+   background-color: rgba(41, 31, 31, 0.3);
+   border :1px solid white;
+   
+  }
+  .btn-red{
+   padding: 8.9px;
+   font-weight: 4000;
+   background-color: red;
+   color: white;
+   font-size: 16px;
+   border-radius: 5px; 
+   border: 1px solid black;
+  }
+  .btn-red-sum{
+ 
+   padding: 12px 34px 15px 23px;
+   font-weight: bold;
+   background-color: red;
+   color: white;
+   font-size: larger;
+   border-radius: 5px;
+   border: 1px solid black;
+   align-items: center;
+   justify-content: center;
+
+  }
+  .main input{
+    
+      align-items: center;
+      justify-content: center;
+   background-color: rgba(0, 0, 0, 0.7);
+   padding:22px 230px 15px 22px;
+  border-radius: 5px;
+  font-size: 13px;
+  border: 1px solid rgba(238, 227, 227, 0.6)
+  }
+  .gap{
+   padding-top: 2.7%;
+  }
+  .trending{
+   display: flex;
+   margin-top: 30px;
+  padding-left: 10%;
+   color: white;
+ font-weight: 360;
+ font-size: 16px;
+  }
+  .setup{
+   display: flex;
+   padding-top: 0.8%;
+   padding-left: 10% ;
+    gap: 22px;
+   
+ 
+  }
+  .genre{
+   padding: 10.1px 14px 10px 8px;
+   font-weight: 400;
+   font-size: 16px;    
+   border-radius: 5px;  
+   color: white;
+   background-color: rgba(41, 31, 31, 0.3);
+   border :1px solid gray ;
+   
+   
+  }
+.genrelang{
+   padding: 10px  14px 10px 8px;
+   font-weight: 400;
+   font-size: 16px;    
+   border-radius: 5px;  
+   color: white;
+   background-color: rgba(41, 31, 31, 0.3);
+   border :1px solid gray; 
+   
+  }
+ 
+  .card-container {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      margin-left: 180px;
+      gap: 30px;
+      padding: 20px; 
+      
+  }
+
+  .card {
+      position: relative;
+      width: 180px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease; 
+      scroll-snap-align: start;
+      border-radius: 3px;
+      
+  }
+
+  .card:hover {
+      transform: translateX(10px); 
+  }
+
+  .card:hover ~ .card {
+      transform: translateX(-10px);
+  }
+
+  .card img {
+      width: 100%; 
+      height: 100%;
+      object-fit: cover; 
+      display: block;
+  }
+
+  .overlay-number {
+      position: absolute;
+      top: 140px;
+      font-size: 100px;
+      color: rgba(10, 1, 1, 0.919);
+      font-weight: bold;
+      text-shadow: 
+          5px 5px 0 rgb(233, 225, 225), 
+          -5px -5px 0 rgba(234, 230, 230, 0.9),
+          5px -5px 0 rgb(225, 220, 220),
+          -5px 5px 0 rgb(219, 213, 213), 
+          5px 5px 0 rgba(255, 255, 255, 0.9);
+  }
+
+
+.boxcontainer {
+      display: flex;
+      flex-wrap:wrap;
+      gap: 20px;
+      margin-left: 20px;
+      justify-content: center;
+      align-items: center;
+      max-width: 1600px; 
+      
+  }
+
+  .box {
+      margin-top: 15px;
+      background: linear-gradient(145deg, #121212, #431c66);
+      color: white;
+      border-radius: 15px;
+      padding: 12px;
+      width: 300px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      text-align: center;
+  }
+
+  .box h2 {
+      margin-top: 0;
+      font-size: 1.5em;
+      font-weight: bold;
+  }
+
+  .box p {
+      margin: 10px 0;
+      font-size: 1em;
+      color: rgba(255, 255, 255, 0.7);
+  }
+
+  .box svg {
+      width: 100px;
+      margin-top: 20px;
+     margin-left: 70%;
+  }
+.faq  {
+display: flex;
+   margin-top: 5%;
+   margin-bottom: 2%;
+  padding-left: 10%;
+   color: white;
+ font-weight: 360;
+ font-size: 16px;
+}
+.questions.hover{
+background-color: rgb(201, 181, 181);
+}
+.questions{
+display: flex;
+transition: all ease-out;
+color: #ffffff;
+background-color: #414141;
+justify-content: space-between;
+padding: 22px; 
+max-width:85vw ;
+margin: auto;
+cursor: pointer;
+margin-bottom: 1%;
+font-size: 22px;
+
+}
+.call{
+  display: flex;
+  text-align: left;
+  color:  #ece5e5;
+  margin-left: 8%;
+  margin-top:40px;
+  margin-bottom: 20px;
+}
+.call a{
+  color:#ece5e5 ;
+}
+
+footer a{
+  color: #ece5e5;
+}
+footer{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr ;
+  color: aliceblue;
+}
+.footer-item{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-left: 32%;
+  gap: 10px;
+  padding: 2%;
+}
+.lastbtn{
+display: flex;
+padding: 8px 20px 5px 40px;
+   font-weight: 400;
+   font-size: 16px;    
+   border-radius: 5px;  
+   color: white;
+   background-color: rgba(41, 31, 31, 0.3);
+   border :1px solid white;
+   margin-top: 3%;
+   margin-bottom: 2%;
+  padding-left: 2%;
+  margin-left: 8%;
+}
+.call2{
+  display: flex;
+  text-align: left;
+  color:  #ece5e5;
+  margin-left: 8%;
+  margin-top:43px;
+  margin-bottom: 60px;}
+
+  .call3{
+  display: flex;
+  text-align: center;
+  color:  #ece5e5;
+justify-content: center;
+margin-bottom: 1.9%;
+  }
+@media screen and (max-width: 496px){
+  
+  
+  .btn{
+   padding: 8px ;
+   font-weight: 400;
+   font-size: 12px;    
+   border-radius: 2px;  
+  margin-top: 7%;
+  }
+  .btn-red{
+   padding: 10px;
+   font-weight: 400;
+   font-size: 12px;
+   border-radius:2px; 
+   border: 1px solid black;
+  }
+  .btn-red-sum{
+ display: flex;
+ border-radius: 5px;
+margin-left: 23%;
+padding: 10px 24px 12px 12px;
+}
+.main input{
+  margin-top: 5%;
+ padding:20px 100px 13px 20px;
+margin-bottom:16px;
+}
+.card-container {
+      margin-left: 10px;
+      width: 100%;
+}
+.content.text{
+  height: 29vh;
+ 
+}
+.content.text> :nth-child(1){
+  font-weight: 1000;
+  font-size: 34px;
+  text-align: center;
+}
+.content.text> :nth-child(2){
+  font-weight: 1000;
+  font-size: 34px;
+  text-align: center;
+}
+.content.text> :nth-child(3){
+  font-weight: 1000;
+  font-size: 34px;
+  text-align: center;
+}
+.content.text> :nth-child(4){
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+margin-top:10px ;
+}
+.content.text> :nth-child(5){
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 10%;
+  margin-bottom:1.2% ;
+}
+.main{
+
+  background-image: url("IN-en-20241021-TRIFECTA-perspective_2277eb50-9da3-4fdf-adbe-74db0e9ee2cf_large.jpg");
+  height:95vh;
+  position: relative;
+  background-size: cover;
+  background-position:center center ;
+  max-height: 540px;
+  max-width: 645px;
+}
+.card-container{
+
+      margin-left: 10px;
+      gap: 6px;
+      padding: 20px; 
+}
+.boxcontainer{
+  margin-left: 42px;
+  gap: 2px;
+  max-width: 332.2px; 
+}  
+.faq{
+   margin-top: 15%;
+   margin-bottom: 5%;
+  padding-left: 10%;
+ 
+}
+
+  
+.footer-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  margin-left: 32%;
+  gap: 10px;
+  padding: 2%;
+  max-width: 334.4;
+  max-height: 495;
+}
+.lastbtn{
+  display: flex;
+  padding: 8px 20px 5px 40px;
+       font-weight: 400;
+       font-size: 16px;    
+       border-radius: 5px;  
+       color: white;
+       background-color: rgba(41, 31, 31, 0.3);
+       border :1px solid white;
+       margin-top: 1%;
+       margin-bottom: 2%;
+      padding-left: 2%;
+      margin-left: 8%;
+}
+}
